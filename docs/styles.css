@@ -338,7 +338,7 @@ h1 em,
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem 2rem;
+  gap: 1.5rem;
   align-items: center;
 }
 
