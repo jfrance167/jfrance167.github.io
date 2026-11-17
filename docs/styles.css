@@ -15,6 +15,7 @@
   --silver-100: #edf1f4;
   --white: #fbfcfd;
   --champagne: #c8aa70;
+  --champagne-ink: #8a6728;
   --champagne-light: #e0c998;
   --line-dark: rgba(237, 241, 244, 0.16);
   --line-light: rgba(8, 21, 38, 0.14);
@@ -549,14 +550,13 @@ h1 em,
 
 .skill-card {
   position: relative;
-  min-height: 25rem;
   padding: clamp(1.7rem, 3vw, 2.6rem);
   overflow: hidden;
   background: var(--white);
   transition: transform 280ms var(--ease), background-color 280ms ease;
 }
 
-.skill-card::after {
+.skill-card-wide::after {
   content: "";
   position: absolute;
   right: -2rem;
@@ -574,32 +574,20 @@ h1 em,
   background: #ffffff;
 }
 
-.skill-card:hover::after {
+.skill-card-wide:hover::after {
   transform: scale(1.35);
   border-color: rgba(200, 170, 112, 0.55);
 }
 
-.card-number {
-  position: absolute;
-  top: 1.4rem;
-  right: 1.5rem;
-  color: var(--slate-400);
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
+.skill-title {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
 }
 
 .skill-icon {
-  display: grid;
-  width: 3.7rem;
-  aspect-ratio: 1;
-  margin-bottom: 4.5rem;
-  place-items: center;
-  color: var(--champagne);
-  border: 1px solid var(--line-light);
-  border-radius: 50%;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
+  flex: none;
+  color: var(--champagne-ink);
 }
 
 .skill-card h3 {
@@ -639,7 +627,6 @@ h1 em,
   grid-template-columns: minmax(15rem, 0.8fr) 1.2fr;
   gap: 4rem;
   align-items: center;
-  min-height: auto;
   color: var(--white);
   background: var(--navy-800);
 }
